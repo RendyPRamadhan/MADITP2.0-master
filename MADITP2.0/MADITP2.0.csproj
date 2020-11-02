@@ -1,0 +1,1889 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E96E17AE-0E5B-4B24-87EA-1EB419133B98}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MADITP2._0</RootNamespace>
+    <AssemblyName>MADITP2.0</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EasyHTMLReports, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyHTMLReports.1.0.0\lib\EasyHTMLReports.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp">
+      <HintPath>..\packages\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tira.Component, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Tira.Component.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationLogic\AR\ARCreditLimitAL.cs" />
+    <Compile Include="ApplicationLogic\AR\ARDistTxnAL.cs" />
+    <Compile Include="ApplicationLogic\AR\ARMasterCollectorAL.cs" />
+    <Compile Include="ApplicationLogic\AR\ARPrintSlipKuitansiProcessAL.cs" />
+    <Compile Include="ApplicationLogic\CB\CBARVoidEnteredCollectionAL.cs" />
+    <Compile Include="ApplicationLogic\CB\CBARCollectionDepositEntryAL.cs" />
+    <Compile Include="ApplicationLogic\CB\CBCashBankTypeAL.cs" />
+    <Compile Include="ApplicationLogic\CB\CBGeneralParameterAL.cs" />
+    <Compile Include="ApplicationLogic\CB\CBMasterBankGroupAL.cs" />
+    <Compile Include="ApplicationLogic\CB\CBMasterCashBankAL.cs" />
+    <Compile Include="ApplicationLogic\CB\CBMasterCashCodeAL.cs" />
+    <Compile Include="ApplicationLogic\CB\CBMasterCurrencyCodeAL.cs" />
+    <Compile Include="ApplicationLogic\CB\CBOtherDocsAL.cs" />
+    <Compile Include="ApplicationLogic\AR\ARListKuitansiSlipUnprocessAllAL.cs" />
+    <Compile Include="ApplicationLogic\AR\ARPrintKuitansiSementaraAL.cs" />
+    <Compile Include="ApplicationLogic\AR\ARReprintSlipKuitansiProcessAL.cs" />
+    <Compile Include="ApplicationLogic\CB\CBVoucherTypeAL.cs" />
+    <Compile Include="ApplicationLogic\GlobalAL.cs" />
+    <Compile Include="ApplicationLogic\AR\ARListKuitansiProcessAL.cs" />
+    <Compile Include="ApplicationLogic\GS\Datarow.cs" />
+    <Compile Include="ApplicationLogic\GS\GSBranchAL.cs" />
+    <Compile Include="ApplicationLogic\GS\GSEntityAL.cs" />
+    <Compile Include="ApplicationLogic\GS\GSFiscalCalendarAL.cs" />
+    <Compile Include="ApplicationLogic\GS\GSModuleAL.cs" />
+    <Compile Include="ApplicationLogic\GS\GSSequenceNumberEditorAL.cs" />
+    <Compile Include="ApplicationLogic\GS\GSMasterCityAL.cs" />
+    <Compile Include="ApplicationLogic\GS\GSMasterZipCodesAL.cs" />
+    <Compile Include="ApplicationLogic\GS\GSUserManagementAL.cs" />
+    <Compile Include="ApplicationLogic\IM\IMMasterDeliveryManAL.cs" />
+    <Compile Include="ApplicationLogic\IM\IMMasterProductGroupAL.cs" />
+    <Compile Include="ApplicationLogic\IM\IMMasterProductSubGroupAL.cs" />
+    <Compile Include="ApplicationLogic\IM\IMMasterWarehouseAL.cs" />
+    <Compile Include="ApplicationLogic\IM\IMOtherStockTransactionEntryAL.cs" />
+    <Compile Include="ApplicationLogic\IM\IMTransactionTypeAL.cs" />
+    <Compile Include="ApplicationLogic\IM\IMRejectConfirmationAL.cs" />
+    <Compile Include="ApplicationLogic\IM\IMTransferConfirmationAL.cs" />
+    <Compile Include="ApplicationLogic\IM\IMTransferTypeAL.cs" />
+    <Compile Include="ApplicationLogic\IM\IMTukarBarangAL.cs" />
+    <Compile Include="ApplicationLogic\IM\IMWarehouseSecurityAL.cs" />
+    <Compile Include="ApplicationLogic\IM\IMWarehouseTransferOutAL.cs" />
+    <Compile Include="ApplicationLogic\RC\RCCategoryEpcAL.cs" />
+    <Compile Include="ApplicationLogic\RC\RCEducationAL.cs" />
+    <Compile Include="ApplicationLogic\RC\RCLanguageCodeAL.cs" />
+    <Compile Include="ApplicationLogic\RC\RCMaritalStatusAL.cs" />
+    <Compile Include="ApplicationLogic\RC\RCMasterLevelAL.cs" />
+    <Compile Include="ApplicationLogic\RC\RCMasterODTAL.cs" />
+    <Compile Include="ApplicationLogic\RC\RCRelativeAL.cs" />
+    <Compile Include="ApplicationLogic\RC\RCRepMasterAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOCancelVerificationAL.cs" />
+    <Compile Include="ApplicationLogic\RC\RCReligionAL.cs" />
+    <Compile Include="ApplicationLogic\RC\RCRepTypeAL.cs" />
+    <Compile Include="ApplicationLogic\RC\RCTeamAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOCustomerGroupAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOCustomerTypeAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SODetailAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOInvoiceHeaderAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOKPCancelAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOKpHeaderAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOKPRegistrationAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOMasterBrandAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOMasterCategoryProductAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOMasterCustomerAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOMasterProductAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOMasterSubBrand1AL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOMasterSubBrand2AL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOReportCOGSAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOTelemarketingParameterAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOTelemarketingQuestionMasterAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOKPSourceAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOReturnTypeAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOUnitHongkongAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOUploadResiAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOUploadResiJNTAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOUploadResiPCPAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOVerificationProcessAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOVerificatorMasterAL.cs" />
+    <Compile Include="BusinessLogic\AR\ARCreditLimitBL.cs" />
+    <Compile Include="BusinessLogic\AR\ARItemBL.cs" />
+    <Compile Include="BusinessLogic\AR\ARDistTxnBL.cs" />
+    <Compile Include="BusinessLogic\AR\ARKwProcessFlagBL.cs" />
+    <Compile Include="BusinessLogic\AR\ARListKuitansiSlipUnprocessAllBL.cs" />
+    <Compile Include="BusinessLogic\AR\ARMasterCollectorBL.cs" />
+    <Compile Include="BusinessLogic\AR\ARPrintKuitansiSementaraBL.cs" />
+    <Compile Include="BusinessLogic\AR\ARListKuitansiProcessBL.cs" />
+    <Compile Include="BusinessLogic\AR\ARPrintSlipKuitansiProcessBL.cs" />
+    <Compile Include="BusinessLogic\AR\ARReprintSlipKuitansiProcessBL.cs" />
+    <Compile Include="BusinessLogic\AR\ARTdkTerprosesKwBL.cs" />
+    <Compile Include="BusinessLogic\AR\ARTxnBL.cs" />
+    <Compile Include="BusinessLogic\CB\CBARCollectionDepositEntryBL.cs" />
+    <Compile Include="BusinessLogic\CB\CBARCollectionDepositEntryGLAccountDescription.cs" />
+    <Compile Include="BusinessLogic\CB\CBARCollectionDepositEntryIncentivePaymentBL.cs" />
+    <Compile Include="BusinessLogic\CB\CBARCollectionDepositEntryVoucherDistTxnBL.cs" />
+    <Compile Include="BusinessLogic\CB\CBARCollectionDepositEntryVoucherTxnBL.cs" />
+    <Compile Include="BusinessLogic\CB\CBCashBankTypeBL.cs" />
+    <Compile Include="BusinessLogic\CB\CBGeneralParameterBL.cs" />
+    <Compile Include="BusinessLogic\CB\CBMasterBankGroupBL.cs" />
+    <Compile Include="BusinessLogic\CB\CBMasterCashBankBL.cs" />
+    <Compile Include="BusinessLogic\CB\CBMasterCashCodeBL.cs" />
+    <Compile Include="BusinessLogic\CB\CBMasterCurrencyCodeBL.cs" />
+    <Compile Include="BusinessLogic\CB\CBVoucherDistTxnBL.cs" />
+    <Compile Include="BusinessLogic\CB\CBVoucherTxnBL.cs" />
+    <Compile Include="BusinessLogic\CB\CBVoucherTypeBL.cs" />
+    <Compile Include="BusinessLogic\GS\GSBranchBL.cs" />
+    <Compile Include="BusinessLogic\GS\GSEntityBL.cs" />
+    <Compile Include="BusinessLogic\GS\GSUserManagementBL.cs" />
+    <Compile Include="BusinessLogic\IM\IMMasterDeliveryManBL.cs" />
+    <Compile Include="BusinessLogic\IM\IMMasterProductGroupBL.cs" />
+    <Compile Include="BusinessLogic\IM\IMMasterProductSubGroupBL.cs" />
+    <Compile Include="BusinessLogic\IM\IMMasterWarehouseBL.cs" />
+    <Compile Include="BusinessLogic\IM\IMOtherStockTransactionEntryBL.cs" />
+    <Compile Include="BusinessLogic\IM\IMStockBalanceBL.cs" />
+    <Compile Include="BusinessLogic\IM\IMStockMovementBL.cs" />
+    <Compile Include="BusinessLogic\IM\IMStockTxnBL.cs" />
+    <Compile Include="BusinessLogic\IM\IMTransactionTypeBL.cs" />
+    <Compile Include="BusinessLogic\IM\IMTransferTypeBL.cs" />
+    <Compile Include="BusinessLogic\IM\IMTukarBarangBL.cs" />
+    <Compile Include="BusinessLogic\IM\IMWarehouseSecurityBL.cs" />
+    <Compile Include="BusinessLogic\IM\IMTransferConfirmationBL.cs" />
+    <Compile Include="BusinessLogic\IM\IMWarehouseTransferOutBL.cs" />
+    <Compile Include="BusinessLogic\RC\RCCategoryEpcBL.cs" />
+    <Compile Include="BusinessLogic\RC\RCEducationBL.cs" />
+    <Compile Include="BusinessLogic\RC\RCLanguageCodeBL.cs" />
+    <Compile Include="BusinessLogic\RC\RCLevelEPCBO.cs" />
+    <Compile Include="BusinessLogic\RC\RCMaritalStatusBL.cs" />
+    <Compile Include="BusinessLogic\RC\RCRelativeBL.cs" />
+    <Compile Include="BusinessLogic\RC\RCReligionBL.cs" />
+    <Compile Include="BusinessLogic\RC\RCRepTypeBL.cs" />
+    <Compile Include="BusinessLogic\RC\RCTeamBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOInvoiceDetailBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOInvoiceHeaderBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOKPDetailBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOKPHeaderBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOMasterBrandBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOMasterCategoryProductBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOMasterCustomerBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOCustomerGroupBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOCustomerTypeBL.cs" />
+    <Compile Include="BusinessLogic\SO\SODetailBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOKPCancelBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOKPRegistrationBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOKPSourceBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOMasterGroupProductBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOMasterPricelistBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOMasterProductBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOMasterSubBrand1BL.cs" />
+    <Compile Include="BusinessLogic\SO\SOMasterSubBrand2BL.cs" />
+    <Compile Include="BusinessLogic\SO\SOMasterSubgroupProductBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOReportCOGSBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOReturnTypeBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOTelemarketingParameterBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOTelemarketingQuestionMasterBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOUnitHongkongBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOUploadResiBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOUploadResiJNTBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOUploadResiPCPBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOVerificationProcessBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOVerificatorMasterBL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOInvoiceTypeAL.cs" />
+    <Compile Include="ApplicationLogic\SO\SOOrderTypeAL.cs" />
+    <Compile Include="BusinessLogic\GS\GSFiscalCalendarBL.cs" />
+    <Compile Include="BusinessLogic\GS\GSMasterCityBL.cs" />
+    <Compile Include="BusinessLogic\GS\GSMasterReligionBL.cs" />
+    <Compile Include="BusinessLogic\GS\GSMasterZipCodesBL.cs" />
+    <Compile Include="BusinessLogic\GS\GSModuleBL.cs" />
+    <Compile Include="BusinessLogic\GS\GSSequenceNumberEditorBL.cs" />
+    <Compile Include="BusinessLogic\RC\RCMasterLevelBL.cs" />
+    <Compile Include="BusinessLogic\RC\RCMasterOctTypeBL.cs" />
+    <Compile Include="BusinessLogic\RC\RCMasterRegistrationBL.cs" />
+    <Compile Include="BusinessLogic\RC\RCRepMasterBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOInvoiceTypeBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOMasterDivisionBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOMasterPrincipalBL.cs" />
+    <Compile Include="BusinessLogic\SO\SOOrderTypeBL.cs" />
+    <Compile Include="DataAccess\AR\ARCreditLimitDA.cs" />
+    <Compile Include="DataAccess\AR\ARDistTxnDA.cs" />
+    <Compile Include="DataAccess\AR\ARListKuitansiSlipUnprocessAllDA.cs" />
+    <Compile Include="DataAccess\AR\ARMasterCollectorDA.cs" />
+    <Compile Include="DataAccess\AR\ARPrintKuitansiSementaraDA.cs" />
+    <Compile Include="DataAccess\AR\ARListKuitansiProcessDA.cs" />
+    <Compile Include="DataAccess\AR\ARPrintSlipKuitansiProcessDA.cs" />
+    <Compile Include="DataAccess\CB\CBARVoidEnteredCollectionDA.cs" />
+    <Compile Include="DataAccess\CB\CBARCollectionDepositEntryDA.cs" />
+    <Compile Include="DataAccess\CB\CBCashBankTypeDA.cs" />
+    <Compile Include="DataAccess\CB\CBGeneralParameterDA.cs" />
+    <Compile Include="DataAccess\CB\CBMasterBankGroupDA.cs" />
+    <Compile Include="DataAccess\CB\CBMasterCashBankDA.cs" />
+    <Compile Include="DataAccess\CB\CBMasterCashCodeDA.cs" />
+    <Compile Include="DataAccess\CB\CBMasterCurrencyCodeDA.cs" />
+    <Compile Include="DataAccess\CB\CBOtherDocsDA.cs" />
+    <Compile Include="DataAccess\AR\ARReprintSlipKuitansiProcessDA.cs" />
+    <Compile Include="DataAccess\CB\CBVoucherTypeDA.cs" />
+    <Compile Include="DataAccess\GS\GSBranchDA.cs" />
+    <Compile Include="DataAccess\GS\GSEntityDA.cs" />
+    <Compile Include="DataAccess\GS\GSFiscalCalendarDA.cs" />
+    <Compile Include="DataAccess\GS\GSMasterCityDA.cs" />
+    <Compile Include="DataAccess\GS\GSMasterReligionDA.cs" />
+    <Compile Include="DataAccess\GS\GSModuleDA.cs" />
+    <Compile Include="DataAccess\GS\GSSequenceNumberEditorDA.cs" />
+    <Compile Include="DataAccess\GS\GSMasterZipCodesDA.cs" />
+    <Compile Include="DataAccess\GS\GSUserManagementDA.cs" />
+    <Compile Include="DataAccess\IM\IMMasterDeliveryManDA.cs" />
+    <Compile Include="DataAccess\IM\IMMasterProductGroupDA.cs" />
+    <Compile Include="DataAccess\IM\IMMasterProductSubGroupDA.cs" />
+    <Compile Include="DataAccess\IM\IMMasterWarehouseDA.cs" />
+    <Compile Include="DataAccess\IM\IMOtherStockTransactionEntryDA.cs" />
+    <Compile Include="DataAccess\IM\IMTransactionTypeDA.cs" />
+    <Compile Include="DataAccess\IM\IMRejectConfirmationDA.cs" />
+    <Compile Include="DataAccess\IM\IMTransferConfirmationDA.cs" />
+    <Compile Include="DataAccess\IM\IMTransferTypeDA.cs" />
+    <Compile Include="DataAccess\IM\IMTukarBarangDA.cs" />
+    <Compile Include="DataAccess\IM\IMWarehouseSecurityDA.cs" />
+    <Compile Include="DataAccess\IM\IMWarehouseTransferOutDA.cs" />
+    <Compile Include="DataAccess\RC\RCCategoryEpcDA.cs" />
+    <Compile Include="DataAccess\RC\RCEducationDA.cs" />
+    <Compile Include="DataAccess\RC\RCLanguageCodeDA.cs" />
+    <Compile Include="DataAccess\RC\RCLevelEPCDA.cs" />
+    <Compile Include="DataAccess\RC\RCMaritalStatusDA.cs" />
+    <Compile Include="DataAccess\RC\RCMasterLevelDA.cs" />
+    <Compile Include="DataAccess\RC\RCMasterOctTypeDA.cs" />
+    <Compile Include="DataAccess\RC\RCRelativeDA.cs" />
+    <Compile Include="DataAccess\RC\RCReligionDA.cs" />
+    <Compile Include="DataAccess\RC\RCRepMasterDA.cs" />
+    <Compile Include="DataAccess\SO\SOCancelVerificationDA.cs" />
+    <Compile Include="DataAccess\RC\RCRepTypeDA.cs" />
+    <Compile Include="DataAccess\RC\RCTeamDA.cs" />
+    <Compile Include="DataAccess\SO\SOCustomerGroupDA.cs" />
+    <Compile Include="DataAccess\SO\SOCustomerTypeDA.cs" />
+    <Compile Include="DataAccess\SO\SODetailDA.cs" />
+    <Compile Include="DataAccess\SO\SOInvoiceHeaderDA.cs" />
+    <Compile Include="DataAccess\SO\SOInvoiceTypeDA.cs" />
+    <Compile Include="BusinessLogic\RC\RCMasterODTBL.cs" />
+    <Compile Include="DataAccess\RC\RCMasterODTDA.cs" />
+    <Compile Include="DataAccess\SO\SOKPCancelDA.cs" />
+    <Compile Include="DataAccess\SO\SOKpHeaderDA.cs" />
+    <Compile Include="DataAccess\SO\SOKPRegistrationDA.cs" />
+    <Compile Include="DataAccess\SO\SOKPSourceDA.cs" />
+    <Compile Include="DataAccess\SO\SOMasterBrandDA.cs" />
+    <Compile Include="DataAccess\SO\SOMasterCategoryProductDA.cs" />
+    <Compile Include="DataAccess\SO\SOMasterCustomerDA.cs" />
+    <Compile Include="DataAccess\SO\SOMasterDivisionDA.cs" />
+    <Compile Include="DataAccess\SO\SOMasterPrincipalDA.cs" />
+    <Compile Include="DataAccess\SO\SOMasterProductDA.cs" />
+    <Compile Include="DataAccess\SO\SOMasterSubBrand1DA.cs" />
+    <Compile Include="DataAccess\SO\SOMasterSubBrand2DA.cs" />
+    <Compile Include="DataAccess\SO\SOOrderTypeDA.cs" />
+    <Compile Include="DataAccess\SO\SOReportCOGSDA.cs" />
+    <Compile Include="DataAccess\SO\SOTelemarketingParameterDA.cs" />
+    <Compile Include="DataAccess\SO\SOTelemarketingQuestionMasterDA.cs" />
+    <Compile Include="DataAccess\SO\SOReturnTypeDA.cs" />
+    <Compile Include="DataAccess\SO\SOUnitHongkongDA.cs" />
+    <Compile Include="DataAccess\SO\SOUploadResiDA.cs" />
+    <Compile Include="DataAccess\SO\SOUploadResiJNTDA.cs" />
+    <Compile Include="DataAccess\SO\SOUploadResiPCPDA.cs" />
+    <Compile Include="DataAccess\SO\SOVerificationProcessDA.cs" />
+    <Compile Include="DataAccess\SO\SOVerificatorMasterDA.cs" />
+    <Compile Include="DataSetFile\AR\ARCreditLimitInformationDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARCreditLimitInformationDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFile\AR\ARMasterCollector\ARMasterCollectorDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARMasterCollectorDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFile\CB\CBCashBankType\CBCashBankTypeDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBCashBankTypeDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFile\CB\CBGeneralParameterDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBGeneralParameterDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFile\CB\CBMasterBankGroup\CBMasterBankGroupDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBMasterBankGroupDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFile\CB\CBMasterCashCode\CBMasterCashCodeDS.cs">
+      <DependentUpon>CBMasterCashCodeDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFile\CB\CBMasterCashCode\CBMasterCashCodeDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBMasterCashCodeDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFile\CB\CBMasterCurrencyCode\CBMasterCurrencyCodeDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBMasterCurrencyCodeDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFile\CB\CBVoucherType\CBVoucherTypeDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBVoucherTypeDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFile\SO\SOMasterBrandDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SOMasterBrandDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFile\SO\SOMasterCategoryProduct\SOMasterCategoryProductDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SOMasterCategoryProductDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFile\SO\SOMasterProduct\SOMasterProductDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SOMasterProductDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFile\SO\SOMasterSubBrand1DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SOMasterSubBrand1DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFile\SO\SOMasterSubBrand2DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SOMasterSubBrand2DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFile\SO\SOReportCOGSDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SOReportCOGSDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFile\SO\SOUnitHongkong\SOUnitHongkongDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SOUnitHongkongDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFile\SO\SOUploadResi\SOUploadResiDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SOUploadResiDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\EnumCashType.cs" />
+    <Compile Include="Enums\EnumExcel.cs" />
+    <Compile Include="Enums\EnumFetchData.cs" />
+    <Compile Include="Enums\EnumFilter.cs" />
+    <Compile Include="Enums\EnumState.cs" />
+    <Compile Include="Enums\OCTStatusActive.cs" />
+    <Compile Include="frmLayout1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLayout1.Designer.cs">
+      <DependentUpon>frmLayout1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLayout2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLayout2.Designer.cs">
+      <DependentUpon>frmLayout2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\clsAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\clsAlert.Designer.cs">
+      <DependentUpon>clsAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\clsCryptoEngine.cs" />
+    <Compile Include="Global\clsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\clsDialog.Designer.cs">
+      <DependentUpon>clsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\clsEventButton.cs" />
+    <Compile Include="Global\clsExcel.cs" />
+    <Compile Include="Global\clsGlobal.cs" />
+    <Compile Include="Global\clsHardcoded.cs" />
+    <Compile Include="Global\clsPopUpBA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\clsPopUpBA.Designer.cs">
+      <DependentUpon>clsPopUpBA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\clsPopUpMasterOdt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\clsPopUpMasterOdt.Designer.cs">
+      <DependentUpon>clsPopUpMasterOdt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\clsPopUpOCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\clsPopUpOCT.Designer.cs">
+      <DependentUpon>clsPopUpOCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\clsPopUpProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\clsPopUpProduct.Designer.cs">
+      <DependentUpon>clsPopUpProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\clsPopUpZipCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\clsPopUpZipCode.Designer.cs">
+      <DependentUpon>clsPopUpZipCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\clsPopUpCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\clsPopUpCustomer.Designer.cs">
+      <DependentUpon>clsPopUpCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\clsRepMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\clsRepMaster.Designer.cs">
+      <DependentUpon>clsRepMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\clsReport.cs" />
+    <Compile Include="Global\clsWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\clsWarehouse.Designer.cs">
+      <DependentUpon>clsWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\ComboBoxViewModel.cs" />
+    <Compile Include="Global\SqlParameterHelper.cs" />
+    <Compile Include="Login\clsLogin.cs" />
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDI.Designer.cs">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Report\AR\ARListKuitansiProcess\rptARKwTidakProcess.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptARKwTidakProcess.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\AR\ARListKuitansiProcess\rptARListKuitansiProcess.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptARListKuitansiProcess.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\AR\ARListKuitansiSlipUnprocessAll\rptARListKuitansiSlipUnprocessAll.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptARListKuitansiSlipUnprocessAll.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\AR\ARMasterCollector\rptARMasterCollector.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptARMasterCollector.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\AR\ARPrintKuitansiSementara\rptARPrintKuitansiSementara.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptARPrintKuitansiSementara.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\AR\ARPrintSlipKuitansiProcess\rptARListPrintSlipKuitansiProcess.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptARListPrintSlipKuitansiProcess.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\AR\ARPrintSlipKuitansiProcess\rptARPrintSlipKuitansiProcess.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptARPrintSlipKuitansiProcess.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\AR\ARReprintSlipKuitansiProcess\rptARListReprintSlipKuitansiProcess.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptARListReprintSlipKuitansiProcess.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\AR\ARReprintSlipKuitansiProcess\rptARReprintSlipKuitansiProcess.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptARReprintSlipKuitansiProcess.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CB\rptCBBankType.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCBBankType.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CB\rptCBCashCode.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCBCashCode.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CB\rptCBGeneralParameter.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCBGeneralParameter.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CB\rptCBMasterBankGroup.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCBMasterBankGroup.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CB\rptCBMasterCurrencyCode.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCBMasterCurrencyCode.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CB\rptCBVoucherType.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCBVoucherType.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\GS\GSBranch\rptGSBranch.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGSBranch.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\GS\GSEntity\rptGSEntity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGSEntity.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\GS\GSFiscalCalendar\rptGSFiscalCalendar.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGSFiscalCalendar.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\GS\GSModule\rptGSModule.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGSModule.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\GS\GSSequenceNumberEditor\rptGSSequenceNumberEditor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGSSequenceNumberEditor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SO\rptSOMasterBrand.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSOMasterBrand.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SO\rptSOMasterCategoryProduct.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSOMasterCategoryProduct.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SO\rptSOMasterSubBrand1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSOMasterSubBrand1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SO\rptSOMasterSubBrand2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSOMasterSubBrand2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SO\rptSOReportCUGS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSOReportCUGS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SO\rptSOUnitHongkong.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSOUnitHongkong.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SO\rptSOVerificationStatus.cs">
+      <DependentUpon>rptSOVerificationStatus.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\SO\rptSOVerificationStatusDeliveryConfirmation.cs">
+      <DependentUpon>rptSOVerificationStatusDeliveryConfirmation.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\IM\rptIMWarehouseTransferOut.cs">
+      <DependentUpon>rptIMWarehouseTransferOut.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\SO\rptSOVerificatorScheduleAssignment1.cs">
+      <DependentUpon>rptSOVerificatorScheduleAssignment.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\SO\SOMasterProduct\rptSOMasterProduct.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSOMasterProduct.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SO\SOUploadResi\rptSOUploadResi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSOUploadResi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCBankEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCBankEntry.Designer.cs">
+      <DependentUpon>UCBankEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCCBOtherDoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCCBOtherDoc.Designer.cs">
+      <DependentUpon>UCCBOtherDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCCheque.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCCheque.Designer.cs">
+      <DependentUpon>UCCheque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCReceiptFrom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCReceiptFrom.Designer.cs">
+      <DependentUpon>UCReceiptFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCVoucherID.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCVoucherID.Designer.cs">
+      <DependentUpon>UCVoucherID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\AR\ARListKuitansiProcess\AR_ListKuitansiProcessUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\AR\ARListKuitansiProcess\AR_ListKuitansiProcessUI.Designer.cs">
+      <DependentUpon>AR_ListKuitansiProcessUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\AR\ARMasterCollector\ARMasterCollectorUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\AR\ARMasterCollector\ARMasterCollectorUI.designer.cs">
+      <DependentUpon>ARMasterCollectorUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\AR\ARPrintKuitansiProcess\AR_PrintSlipKuitansiProcessUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\AR\ARPrintKuitansiProcess\AR_PrintSlipKuitansiProcessUI.Designer.cs">
+      <DependentUpon>AR_PrintSlipKuitansiProcessUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\CB\CBARCollectionDepositEntry\CB_ARCollectionDepositEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\CB\CBARCollectionDepositEntry\CB_ARCollectionDepositEntryUI.designer.cs">
+      <DependentUpon>CB_ARCollectionDepositEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\CB\CBARVoidEnteredCollection\CB_ARVoidEnteredCollectionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\CB\CBARVoidEnteredCollection\CB_ARVoidEnteredCollectionUI.designer.cs">
+      <DependentUpon>CB_ARVoidEnteredCollectionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\AR\ARListKuitansiSlipUnprocessAll\AR_ListKuitansiSlipUnprocessAllUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\AR\ARListKuitansiSlipUnprocessAll\AR_ListKuitansiSlipUnprocessAllUI.Designer.cs">
+      <DependentUpon>AR_ListKuitansiSlipUnprocessAllUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\AR\ARPrintKuitansiSementara\AR_PrintKuitansiSementaraUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\AR\ARPrintKuitansiSementara\AR_PrintKuitansiSementaraUI.Designer.cs">
+      <DependentUpon>AR_PrintKuitansiSementaraUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\AR\ARReprintSlipKuitansiProcess\AR_ReprintSlipKuitansiProcessUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\AR\ARReprintSlipKuitansiProcess\AR_ReprintSlipKuitansiProcessUI.Designer.cs">
+      <DependentUpon>AR_ReprintSlipKuitansiProcessUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\CB\CBCashBankType\CBCashBankTypeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\CB\CBCashBankType\CBCashBankTypeUI.Designer.cs">
+      <DependentUpon>CBCashBankTypeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\CB\CBCashCode\CBMasterCashCodeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\CB\CBCashCode\CBMasterCashCodeUI.Designer.cs">
+      <DependentUpon>CBMasterCashCodeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\CB\CBCurrencyCode\CBMasterCurrencyCodeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\CB\CBCurrencyCode\CBMasterCurrencyCodeUI.Designer.cs">
+      <DependentUpon>CBMasterCurrencyCodeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\CB\CBMasterBankGroup\CBMasterBankGroupUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\CB\CBMasterBankGroup\CBMasterBankGroupUI.Designer.cs">
+      <DependentUpon>CBMasterBankGroupUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\CB\CBVoucherType\CBVoucherTypeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\CB\CBVoucherType\CBVoucherTypeUI.Designer.cs">
+      <DependentUpon>CBVoucherTypeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSBranch\GS_BranchUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSBranch\GS_BranchUI.Designer.cs">
+      <DependentUpon>GS_BranchUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\clsLogLoginBO.cs" />
+    <Compile Include="Login\clsLogLoginDA.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserInterface\GS\GSEntity\GS_EntityUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSEntity\GS_EntityUI.Designer.cs">
+      <DependentUpon>GS_EntityUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSFiscalCalendar\GS_FiscalCalendarUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSFiscalCalendar\GS_FiscalCalendarUI.Designer.cs">
+      <DependentUpon>GS_FiscalCalendarUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSModule\GS_ModuleUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSModule\GS_ModuleUI.Designer.cs">
+      <DependentUpon>GS_ModuleUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSSequenceNumberEditor\GS_SequenceNumberEditorUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSSequenceNumberEditor\GS_SequenceNumberEditorUI.Designer.cs">
+      <DependentUpon>GS_SequenceNumberEditorUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSMasterCity\GSMasterCityUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSMasterCity\GSMasterCityUI.Designer.cs">
+      <DependentUpon>GSMasterCityUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSMasterZipCodes\GSMasterZipCodesUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSMasterZipCodes\GSMasterZipCodesUI.Designer.cs">
+      <DependentUpon>GSMasterZipCodesUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSUserManagement\GSUserManagementUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSUserManagement\GSUserManagementUI.Designer.cs">
+      <DependentUpon>GSUserManagementUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSUserManagement\GS_UserManagementEditorUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\GS\GSUserManagement\GS_UserManagementEditorUI.Designer.cs">
+      <DependentUpon>GS_UserManagementEditorUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\SO\rptSOVerificatorMaster.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSOVerificatorMaster.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMMasterDeliveryMan\IMMasterDeliveryManUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMMasterDeliveryMan\IMMasterDeliveryManUI.Designer.cs">
+      <DependentUpon>IMMasterDeliveryManUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMMasterWarehouse\IMMasterWarehouseUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMMasterWarehouse\IMMasterWarehouseUI.Designer.cs">
+      <DependentUpon>IMMasterWarehouseUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMOtherStockTransactionEntry\IM_OtherStockTransactionEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMOtherStockTransactionEntry\IM_OtherStockTransactionEntryUI.Designer.cs">
+      <DependentUpon>IM_OtherStockTransactionEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMRejectConfirmation\IM_RejectConfirmationUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMRejectConfirmation\IM_RejectConfirmationUI.Designer.cs">
+      <DependentUpon>IM_RejectConfirmationUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMTransactionType\IMTransactionTypeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMTransactionType\IMTransactionTypeUI.Designer.cs">
+      <DependentUpon>IMTransactionTypeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMTransferConfirmation\IM_TransferConfirmationUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMTransferConfirmation\IM_TransferConfirmationUI.Designer.cs">
+      <DependentUpon>IM_TransferConfirmationUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMTransferType\IMTransferTypeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMTransferType\IMTransferTypeUI.Designer.cs">
+      <DependentUpon>IMTransferTypeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMTukarBarang\IM_TukarBarangUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMTukarBarang\IM_TukarBarangUI.Designer.cs">
+      <DependentUpon>IM_TukarBarangUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMWarehouseSecurity\IMWarehouseSecurityUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMWarehouseSecurity\IMWarehouseSecurityUI.Designer.cs">
+      <DependentUpon>IMWarehouseSecurityUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMWarehouseTransferOut\IM_WarehouseTransferOutUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\IM\IMWarehouseTransferOut\IM_WarehouseTransferOutUI.Designer.cs">
+      <DependentUpon>IM_WarehouseTransferOutUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCCategoryEpc\RCCategoryEpcUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCCategoryEpc\RCCategoryEpcUI.Designer.cs">
+      <DependentUpon>RCCategoryEpcUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCEducation\RCEducationUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCEducation\RCEducationUI.Designer.cs">
+      <DependentUpon>RCEducationUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCMaritalStatus\RCMaritalStatusUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCMaritalStatus\RCMaritalStatusUI.Designer.cs">
+      <DependentUpon>RCMaritalStatusUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCMasterLevel\RCMasterLevelUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCMasterLevel\RCMasterLevelUI.Designer.cs">
+      <DependentUpon>RCMasterLevelUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCMasterTeam\RCMasterTeamUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCMasterTeam\RCMasterTeamUI.Designer.cs">
+      <DependentUpon>RCMasterTeamUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCReligion\RCReligionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCReligion\RCReligionUI.Designer.cs">
+      <DependentUpon>RCReligionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCRepMaster\RCRepMasterUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCRepMaster\RCRepMasterUI.Designer.cs">
+      <DependentUpon>RCRepMasterUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCUpdateAccountUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCUpdateAccountUI.Designer.cs">
+      <DependentUpon>RCUpdateAccountUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCUpdateNpwpUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCUpdateNpwpUI.Designer.cs">
+      <DependentUpon>RCUpdateNpwpUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCMasterODT\RC_MasterODTUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\RC\RCMasterODT\RC_MasterODTUI.Designer.cs">
+      <DependentUpon>RC_MasterODTUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\RC\RC_LevelEPCUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\RC\RC_LevelEPCUI.Designer.cs">
+      <DependentUpon>RC_LevelEPCUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOCancelVerification\SO_CancelVerificationUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOCancelVerification\SO_CancelVerificationUI.designer.cs">
+      <DependentUpon>SO_CancelVerificationUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOCategoryProduct\SOMasterCategoryProductUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOCategoryProduct\SOMasterCategoryProductUI.Designer.cs">
+      <DependentUpon>SOMasterCategoryProductUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOCustomerGroup\SOCustomerGroupUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOCustomerGroup\SOCustomerGroupUI.Designer.cs">
+      <DependentUpon>SOCustomerGroupUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOCustomerType\SOCustomerTypeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOCustomerType\SOCustomerTypeUI.Designer.cs">
+      <DependentUpon>SOCustomerTypeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SODetailUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SODetailUI.Designer.cs">
+      <DependentUpon>SODetailUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOInvoiceTypeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOInvoiceTypeUI.Designer.cs">
+      <DependentUpon>SOInvoiceTypeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOInvoice\SOInvoiceUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOInvoice\SOInvoiceUI.Designer.cs">
+      <DependentUpon>SOInvoiceUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOKPCancelUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOKPCancelUI.Designer.cs">
+      <DependentUpon>SOKPCancelUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOKPEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOKPEntryUI.Designer.cs">
+      <DependentUpon>SOKPEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOKPRegistrationUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOKPRegistrationUI.Designer.cs">
+      <DependentUpon>SOKPRegistrationUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOKPSourceUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOKPSourceUI.Designer.cs">
+      <DependentUpon>SOKPSourceUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOKPTypeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOKPTypeUI.Designer.cs">
+      <DependentUpon>SOKPTypeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOMasterCustomer\SOMasterCustomerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOMasterCustomer\SOMasterCustomerUI.Designer.cs">
+      <DependentUpon>SOMasterCustomerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOMasterProduct\SOMasterProductUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOMasterProduct\SOMasterProductUI.designer.cs">
+      <DependentUpon>SOMasterProductUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOReportCOGS\SOReportCOGSUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOReportCOGS\SOReportCOGSUI.Designer.cs">
+      <DependentUpon>SOReportCOGSUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOTelemarketingParameter\SO_TelemarketingParameterUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOTelemarketingParameter\SO_TelemarketingParameterUI.Designer.cs">
+      <DependentUpon>SO_TelemarketingParameterUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOTelemarketingQuestionMaster\SO_TelemarketingQuestionMasterUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOTelemarketingQuestionMaster\SO_TelemarketingQuestionMasterUI.Designer.cs">
+      <DependentUpon>SO_TelemarketingQuestionMasterUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOReturnTypeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOReturnTypeUI.Designer.cs">
+      <DependentUpon>SOReturnTypeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOUnitHongkong\SOUnitHongkongUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOUnitHongkong\SOUnitHongkongUI.designer.cs">
+      <DependentUpon>SOUnitHongkongUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOUploadResiJNT\SOUploadResiJNTUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOUploadResiJNT\SOUploadResiJNTUI.Designer.cs">
+      <DependentUpon>SOUploadResiJNTUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOUploadResiPCP\SOUploadResiPCPUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOUploadResiPCP\SOUploadResiPCPUI.Designer.cs">
+      <DependentUpon>SOUploadResiPCPUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOUploadResiSAP\SOUploadResiSAPUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOUploadResiSAP\SOUploadResiSAPUI.Designer.cs">
+      <DependentUpon>SOUploadResiSAPUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOUploadResi\SOUploadResiUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOUploadResi\SOUploadResiUI.Designer.cs">
+      <DependentUpon>SOUploadResiUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOVerificationProcess\SO_DialogEditCustomerAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOVerificationProcess\SO_DialogEditCustomerAddress.Designer.cs">
+      <DependentUpon>SO_DialogEditCustomerAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOVerificationProcess\SO_DialogEditMemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOVerificationProcess\SO_DialogEditMemo.Designer.cs">
+      <DependentUpon>SO_DialogEditMemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOVerificationProcess\SO_VerificationProcessUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOVerificationProcess\SO_VerificationProcessUI.Designer.cs">
+      <DependentUpon>SO_VerificationProcessUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOVerificatorMaster\SO_VerificatorMasterUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SO\SOVerificatorMaster\SO_VerificatorMasterUI.Designer.cs">
+      <DependentUpon>SO_VerificatorMasterUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmLayout1.resx">
+      <DependentUpon>frmLayout1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLayout2.resx">
+      <DependentUpon>frmLayout2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMDI.resx">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\clsAlert.resx">
+      <DependentUpon>clsAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\clsDialog.resx">
+      <DependentUpon>clsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\clsPopUpBA.resx">
+      <DependentUpon>clsPopUpBA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\clsPopUpMasterOdt.resx">
+      <DependentUpon>clsPopUpMasterOdt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\clsPopUpOCT.resx">
+      <DependentUpon>clsPopUpOCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\clsPopUpProduct.resx">
+      <DependentUpon>clsPopUpProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\clsPopUpZipCode.resx">
+      <DependentUpon>clsPopUpZipCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\clsRepMaster.resx">
+      <DependentUpon>clsRepMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\clsPopUpCustomer.resx">
+      <DependentUpon>clsPopUpCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\clsWarehouse.resx">
+      <DependentUpon>clsWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\AR\ARListKuitansiProcess\rptARKwTidakProcess.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptARKwTidakProcess.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\AR\ARListKuitansiProcess\rptARListKuitansiProcess.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptARListKuitansiProcess.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\AR\ARListKuitansiSlipUnprocessAll\rptARListKuitansiSlipUnprocessAll.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptARListKuitansiSlipUnprocessAll.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\AR\ARMasterCollector\rptARMasterCollector.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptARMasterCollector.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\AR\ARPrintKuitansiSementara\rptARPrintKuitansiSementara.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptARPrintKuitansiSementara.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\AR\ARPrintSlipKuitansiProcess\rptARListPrintSlipKuitansiProcess.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptARListPrintSlipKuitansiProcess.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\AR\ARPrintSlipKuitansiProcess\rptARPrintSlipKuitansiProcess.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptARPrintSlipKuitansiProcess.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\AR\ARReprintSlipKuitansiProcess\rptARListReprintSlipKuitansiProcess.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptARListReprintSlipKuitansiProcess.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\AR\ARReprintSlipKuitansiProcess\rptARReprintSlipKuitansiProcess.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptARReprintSlipKuitansiProcess.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CB\rptCBBankType.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCBBankType.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CB\rptCBCashCode.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCBCashCode.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CB\rptCBGeneralParameter.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCBGeneralParameter.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CB\rptCBMasterBankGroup.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCBMasterBankGroup.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CB\rptCBMasterCurrencyCode.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCBMasterCurrencyCode.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CB\rptCBVoucherType.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCBVoucherType.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\GS\GSBranch\rptGSBranch.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGSBranch.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\GS\GSEntity\rptGSEntity.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGSEntity.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\GS\GSFiscalCalendar\rptGSFiscalCalendar.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGSFiscalCalendar.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\GS\GSModule\rptGSModule.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGSModule.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\GS\GSSequenceNumberEditor\rptGSSequenceNumberEditor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGSSequenceNumberEditor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SO\rptSOMasterBrand.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSOMasterBrand.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SO\rptSOMasterCategoryProduct.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSOMasterCategoryProduct.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SO\rptSOMasterSubBrand1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSOMasterSubBrand1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SO\rptSOMasterSubBrand2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSOMasterSubBrand2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SO\rptSOReportCUGS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSOReportCUGS.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SO\rptSOUnitHongkong.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSOUnitHongkong.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SO\rptSOVerificationStatus.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSOVerificationStatus.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SO\rptSOVerificationStatusDeliveryConfirmation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSOVerificationStatusDeliveryConfirmation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\IM\rptIMWarehouseTransferOut.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptIMWarehouseTransferOut.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SO\rptSOVerificatorScheduleAssignment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSOVerificatorScheduleAssignment1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SO\SOMasterProduct\rptSOMasterProduct.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSOMasterProduct.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SO\SOUploadResi\rptSOUploadResi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSOUploadResi.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCBankEntry.resx">
+      <DependentUpon>UCBankEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCCBOtherDoc.resx">
+      <DependentUpon>UCCBOtherDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCCheque.resx">
+      <DependentUpon>UCCheque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCReceiptFrom.resx">
+      <DependentUpon>UCReceiptFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCVoucherID.resx">
+      <DependentUpon>UCVoucherID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\AR\ARListKuitansiProcess\AR_ListKuitansiProcessUI.resx">
+      <DependentUpon>AR_ListKuitansiProcessUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\AR\ARMasterCollector\ARMasterCollectorUI.resx">
+      <DependentUpon>ARMasterCollectorUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\AR\ARPrintKuitansiProcess\AR_PrintSlipKuitansiProcessUI.resx">
+      <DependentUpon>AR_PrintSlipKuitansiProcessUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\CB\CBARCollectionDepositEntry\CB_ARCollectionDepositEntryUI.resx">
+      <DependentUpon>CB_ARCollectionDepositEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\CB\CBARVoidEnteredCollection\CB_ARVoidEnteredCollectionUI.resx">
+      <DependentUpon>CB_ARVoidEnteredCollectionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\AR\ARListKuitansiSlipUnprocessAll\AR_ListKuitansiSlipUnprocessAllUI.resx">
+      <DependentUpon>AR_ListKuitansiSlipUnprocessAllUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\AR\ARPrintKuitansiSementara\AR_PrintKuitansiSementaraUI.resx">
+      <DependentUpon>AR_PrintKuitansiSementaraUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\AR\ARReprintSlipKuitansiProcess\AR_ReprintSlipKuitansiProcessUI.resx">
+      <DependentUpon>AR_ReprintSlipKuitansiProcessUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\CB\CBCashBankType\CBCashBankTypeUI.resx">
+      <DependentUpon>CBCashBankTypeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\CB\CBCashCode\CBMasterCashCodeUI.resx">
+      <DependentUpon>CBMasterCashCodeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\CB\CBCurrencyCode\CBMasterCurrencyCodeUI.resx">
+      <DependentUpon>CBMasterCurrencyCodeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\CB\CBMasterBankGroup\CBMasterBankGroupUI.resx">
+      <DependentUpon>CBMasterBankGroupUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\CB\CBVoucherType\CBVoucherTypeUI.resx">
+      <DependentUpon>CBVoucherTypeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\GS\GSBranch\GS_BranchUI.resx">
+      <DependentUpon>GS_BranchUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\GS\GSEntity\GS_EntityUI.resx">
+      <DependentUpon>GS_EntityUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\GS\GSFiscalCalendar\GS_FiscalCalendarUI.resx">
+      <DependentUpon>GS_FiscalCalendarUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\GS\GSModule\GS_ModuleUI.resx">
+      <DependentUpon>GS_ModuleUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\GS\GSSequenceNumberEditor\GS_SequenceNumberEditorUI.resx">
+      <DependentUpon>GS_SequenceNumberEditorUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\GS\GSMasterCity\GSMasterCityUI.resx">
+      <DependentUpon>GSMasterCityUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\GS\GSMasterZipCodes\GSMasterZipCodesUI.resx">
+      <DependentUpon>GSMasterZipCodesUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\GS\GSUserManagement\GSUserManagementUI.resx">
+      <DependentUpon>GSUserManagementUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\IM\IMMasterDeliveryMan\IMMasterDeliveryManUI.resx">
+      <DependentUpon>IMMasterDeliveryManUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\IM\IMMasterWarehouse\IMMasterWarehouseUI.resx">
+      <DependentUpon>IMMasterWarehouseUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\IM\IMOtherStockTransactionEntry\IM_OtherStockTransactionEntryUI.resx">
+      <DependentUpon>IM_OtherStockTransactionEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\IM\IMRejectConfirmation\IM_RejectConfirmationUI.resx">
+      <DependentUpon>IM_RejectConfirmationUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\IM\IMTransactionType\IMTransactionTypeUI.resx">
+      <DependentUpon>IMTransactionTypeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\IM\IMTransferConfirmation\IM_TransferConfirmationUI.resx">
+      <DependentUpon>IM_TransferConfirmationUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\IM\IMTransferType\IMTransferTypeUI.resx">
+      <DependentUpon>IMTransferTypeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\IM\IMTukarBarang\IM_TukarBarangUI.resx">
+      <DependentUpon>IM_TukarBarangUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\IM\IMWarehouseSecurity\IMWarehouseSecurityUI.resx">
+      <DependentUpon>IMWarehouseSecurityUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\IM\IMWarehouseTransferOut\IM_WarehouseTransferOutUI.resx">
+      <DependentUpon>IM_WarehouseTransferOutUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\RC\RCCategoryEpc\RCCategoryEpcUI.resx">
+      <DependentUpon>RCCategoryEpcUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\RC\RCEducation\RCEducationUI.resx">
+      <DependentUpon>RCEducationUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\RC\RCMaritalStatus\RCMaritalStatusUI.resx">
+      <DependentUpon>RCMaritalStatusUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\RC\RCMasterLevel\RCMasterLevelUI.resx">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SO\rptSOVerificatorMaster.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSOVerificatorMaster.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\RC\RCMasterTeam\RCMasterTeamUI.resx">
+      <DependentUpon>RCMasterTeamUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\RC\RCReligion\RCReligionUI.resx">
+      <DependentUpon>RCReligionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\RC\RCRepMaster\RCRepMasterUI.resx">
+      <DependentUpon>RCRepMasterUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\RC\RCUpdateAccountUI.resx">
+      <DependentUpon>RCUpdateAccountUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\RC\RCUpdateNpwpUI.resx">
+      <DependentUpon>RCUpdateNpwpUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\RC\RC_LevelEPCUI.resx">
+      <DependentUpon>RC_LevelEPCUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOCancelVerification\SO_CancelVerificationUI.resx">
+      <DependentUpon>SO_CancelVerificationUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOCategoryProduct\SOMasterCategoryProductUI.resx">
+      <DependentUpon>SOMasterCategoryProductUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOCustomerGroup\SOCustomerGroupUI.resx">
+      <DependentUpon>SOCustomerGroupUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOCustomerType\SOCustomerTypeUI.resx">
+      <DependentUpon>SOCustomerTypeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SODetailUI.resx">
+      <DependentUpon>SODetailUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOInvoiceTypeUI.resx">
+      <DependentUpon>SOInvoiceTypeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOInvoice\SOInvoiceUI.resx">
+      <DependentUpon>SOInvoiceUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOKPCancelUI.resx">
+      <DependentUpon>SOKPCancelUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOKPEntryUI.resx">
+      <DependentUpon>SOKPEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOKPRegistrationUI.resx">
+      <DependentUpon>SOKPRegistrationUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOKPSourceUI.resx">
+      <DependentUpon>SOKPSourceUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOKPTypeUI.resx">
+      <DependentUpon>SOKPTypeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOMasterCustomer\SOMasterCustomerUI.resx">
+      <DependentUpon>SOMasterCustomerUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOMasterProduct\SOMasterProductUI.resx">
+      <DependentUpon>SOMasterProductUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOReportCOGS\SOReportCOGSUI.resx">
+      <DependentUpon>SOReportCOGSUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOTelemarketingParameter\SO_TelemarketingParameterUI.resx">
+      <DependentUpon>SO_TelemarketingParameterUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOTelemarketingQuestionMaster\SO_TelemarketingQuestionMasterUI.resx">
+      <DependentUpon>SO_TelemarketingQuestionMasterUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOReturnTypeUI.resx">
+      <DependentUpon>SOReturnTypeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOUnitHongkong\SOUnitHongkongUI.resx">
+      <DependentUpon>SOUnitHongkongUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOUploadResiJNT\SOUploadResiJNTUI.resx">
+      <DependentUpon>SOUploadResiJNTUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOUploadResiPCP\SOUploadResiPCPUI.resx">
+      <DependentUpon>SOUploadResiPCPUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOUploadResiSAP\SOUploadResiSAPUI.resx">
+      <DependentUpon>SOUploadResiSAPUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOUploadResi\SOUploadResiUI.resx">
+      <DependentUpon>SOUploadResiUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOVerificationProcess\SO_DialogEditCustomerAddress.resx">
+      <DependentUpon>SO_DialogEditCustomerAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOVerificationProcess\SO_DialogEditMemo.resx">
+      <DependentUpon>SO_DialogEditMemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOVerificationProcess\SO_VerificationProcessUI.resx">
+      <DependentUpon>SO_VerificationProcessUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\RC\RCMasterODT\RC_MasterODTUI.resx">
+      <DependentUpon>RC_MasterODTUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SO\SOVerificatorMaster\SO_VerificatorMasterUI.resx">
+      <DependentUpon>SO_VerificatorMasterUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\MADITP2.0.exe.config" />
+    <None Include="DataSetFile\AR\ARCreditLimitInformationDS.xsc">
+      <DependentUpon>ARCreditLimitInformationDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\AR\ARCreditLimitInformationDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARCreditLimitInformationDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFile\AR\ARCreditLimitInformationDS.xss">
+      <DependentUpon>ARCreditLimitInformationDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\AR\ARMasterCollector\ARMasterCollectorDS.xsc">
+      <DependentUpon>ARMasterCollectorDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\AR\ARMasterCollector\ARMasterCollectorDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARMasterCollectorDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFile\AR\ARMasterCollector\ARMasterCollectorDS.xss">
+      <DependentUpon>ARMasterCollectorDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\CB\CBCashBankType\CBCashBankTypeDS.xsc">
+      <DependentUpon>CBCashBankTypeDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\CB\CBCashBankType\CBCashBankTypeDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBCashBankTypeDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFile\CB\CBCashBankType\CBCashBankTypeDS.xss">
+      <DependentUpon>CBCashBankTypeDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\CB\CBGeneralParameterDS.xsc">
+      <DependentUpon>CBGeneralParameterDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\CB\CBGeneralParameterDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBGeneralParameterDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFile\CB\CBGeneralParameterDS.xss">
+      <DependentUpon>CBGeneralParameterDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\CB\CBMasterBankGroup\CBMasterBankGroupDS.xsc">
+      <DependentUpon>CBMasterBankGroupDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\CB\CBMasterBankGroup\CBMasterBankGroupDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBMasterBankGroupDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFile\CB\CBMasterBankGroup\CBMasterBankGroupDS.xss">
+      <DependentUpon>CBMasterBankGroupDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\CB\CBMasterCashCode\CBMasterCashCodeDS.xsc">
+      <DependentUpon>CBMasterCashCodeDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\CB\CBMasterCashCode\CBMasterCashCodeDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBMasterCashCodeDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFile\CB\CBMasterCashCode\CBMasterCashCodeDS.xss">
+      <DependentUpon>CBMasterCashCodeDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\CB\CBMasterCurrencyCode\CBMasterCurrencyCodeDS.xsc">
+      <DependentUpon>CBMasterCurrencyCodeDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\CB\CBMasterCurrencyCode\CBMasterCurrencyCodeDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBMasterCurrencyCodeDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFile\CB\CBMasterCurrencyCode\CBMasterCurrencyCodeDS.xss">
+      <DependentUpon>CBMasterCurrencyCodeDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\CB\CBVoucherType\CBVoucherTypeDS.xsc">
+      <DependentUpon>CBVoucherTypeDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\CB\CBVoucherType\CBVoucherTypeDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBVoucherTypeDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFile\CB\CBVoucherType\CBVoucherTypeDS.xss">
+      <DependentUpon>CBVoucherTypeDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\SO\SOMasterBrandDS.xsc">
+      <DependentUpon>SOMasterBrandDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\SO\SOMasterBrandDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SOMasterBrandDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFile\SO\SOMasterBrandDS.xss">
+      <DependentUpon>SOMasterBrandDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\SO\SOMasterCategoryProduct\SOMasterCategoryProductDS.xsc">
+      <DependentUpon>SOMasterCategoryProductDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\SO\SOMasterCategoryProduct\SOMasterCategoryProductDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SOMasterCategoryProductDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFile\SO\SOMasterCategoryProduct\SOMasterCategoryProductDS.xss">
+      <DependentUpon>SOMasterCategoryProductDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\SO\SOMasterProduct\SOMasterProductDS.xsc">
+      <DependentUpon>SOMasterProductDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\SO\SOMasterProduct\SOMasterProductDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SOMasterProductDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetFile\SO\SOMasterProduct\SOMasterProductDS.xss">
+      <DependentUpon>SOMasterProductDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\SO\SOMasterSubBrand1DS.xsc">
+      <DependentUpon>SOMasterSubBrand1DS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\SO\SOMasterSubBrand1DS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SOMasterSubBrand1DS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFile\SO\SOMasterSubBrand1DS.xss">
+      <DependentUpon>SOMasterSubBrand1DS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\SO\SOMasterSubBrand2DS.xsc">
+      <DependentUpon>SOMasterSubBrand2DS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\SO\SOMasterSubBrand2DS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SOMasterSubBrand2DS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFile\SO\SOMasterSubBrand2DS.xss">
+      <DependentUpon>SOMasterSubBrand2DS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\SO\SOReportCOGSDS.xsc">
+      <DependentUpon>SOReportCOGSDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\SO\SOReportCOGSDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SOReportCOGSDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetFile\SO\SOReportCOGSDS.xss">
+      <DependentUpon>SOReportCOGSDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\SO\SOUnitHongkong\SOUnitHongkongDS.xsc">
+      <DependentUpon>SOUnitHongkongDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\SO\SOUnitHongkong\SOUnitHongkongDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SOUnitHongkongDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFile\SO\SOUnitHongkong\SOUnitHongkongDS.xss">
+      <DependentUpon>SOUnitHongkongDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\SO\SOUploadResi\SOUploadResiDS.xsc">
+      <DependentUpon>SOUploadResiDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFile\SO\SOUploadResi\SOUploadResiDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SOUploadResiDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetFile\SO\SOUploadResi\SOUploadResiDS.xss">
+      <DependentUpon>SOUploadResiDS.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-import.png" />
+    <Content Include="Resources\TIRALogo2.ico" />
+    <Content Include="Resources\TIRALogoWhite.png" />
+    <None Include="Resources\icon\user-male-go.png" />
+    <None Include="Resources\icon\1475917159_notepad_16x16.ico" />
+    <None Include="Resources\icon\1475916960_notepad_%28edit%29_16x16.ico" />
+    <None Include="Resources\icon\1475917180_notepad_%28delete%29_16x16.ico" />
+    <None Include="Resources\icon\1475917194_print_16x16.ico" />
+    <None Include="Resources\icon\1475917412_redo2_16x16.ico" />
+    <None Include="Resources\icon\1475916986_zoom_16x16.ico" />
+    <None Include="Resources\icon\remove.ico" />
+    <None Include="Resources\icon\6 %282%29.png" />
+    <None Include="Resources\Add_Contact_4545.png" />
+    <None Include="Resources\contact_search1924.png" />
+    <None Include="Resources\contact_search19241.png" />
+    <None Include="Resources\Delete_Contact_4545.png" />
+    <None Include="Resources\batal.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\failed.png" />
+    <None Include="Resources\home.png" />
+    <Content Include="bin\Debug\AxShockwaveFlashObjects.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.CrystalReports.Engine.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportSource.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.Shared.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.Windows.Forms.dll" />
+    <Content Include="bin\Debug\EasyHTMLReports.dll" />
+    <Content Include="bin\Debug\FontAwesome.Sharp.dll" />
+    <Content Include="bin\Debug\MADITP2.0.exe" />
+    <Content Include="bin\Debug\MADITP2.0.pdb" />
+    <Content Include="bin\Debug\ShockwaveFlashObjects.dll" />
+    <Content Include="bin\Debug\stdole.dll" />
+    <Content Include="bin\Debug\Tira.Component.dll" />
+    <Content Include="Resources\Background.jpg" />
+    <Content Include="Resources\icon\Bitmap1.bmp" />
+    <Content Include="Resources\icon\Icon1.ico" />
+    <None Include="Resources\icon\User2.png" />
+    <None Include="Resources\info.png" />
+    <Content Include="Resources\Login.jpg" />
+    <None Include="Resources\refresh_contact1924.png" />
+    <None Include="Resources\tambah.png" />
+    <None Include="Resources\success.png" />
+    <Content Include="Resources\Logo-TRS-NoBackground.png" />
+    <Content Include="Resources\material icon\icons8_folder_50px.png" />
+    <Content Include="Resources\material icon\icons8_form_50px.png" />
+    <Content Include="Resources\material icon\icons8_opened_folder_50px.png" />
+    <Content Include="Resources\TIRALogo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="DataSetFile\SO\SOUploadResiJNT\" />
+    <Folder Include="Report\CB\CBBankType\" />
+    <Folder Include="Report\SO\SOUploadResiJNT\" />
+    <Folder Include="UserInterface\CB\CBGeneralParameter\" />
+    <Folder Include="UserInterface\CB\CBMasterCashBank\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

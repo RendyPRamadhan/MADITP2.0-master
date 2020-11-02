@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MADITP2.0", "MADITP2.0\MADITP2.0.csproj", "{E96E17AE-0E5B-4B24-87EA-1EB419133B98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E96E17AE-0E5B-4B24-87EA-1EB419133B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E96E17AE-0E5B-4B24-87EA-1EB419133B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E96E17AE-0E5B-4B24-87EA-1EB419133B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E96E17AE-0E5B-4B24-87EA-1EB419133B98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BAD039C9-4B43-4731-9460-42213E2860B3}
+	EndGlobalSection
+EndGlobal
