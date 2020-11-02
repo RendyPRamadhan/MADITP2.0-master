@@ -531,7 +531,7 @@
             // 
             this.PanelFormPrint.BackColor = System.Drawing.Color.White;
             this.PanelFormPrint.Controls.Add(this.rptViewer);
-            this.PanelFormPrint.Location = new System.Drawing.Point(24, 511);
+            this.PanelFormPrint.Location = new System.Drawing.Point(12, 198);
             this.PanelFormPrint.Name = "PanelFormPrint";
             this.PanelFormPrint.Size = new System.Drawing.Size(991, 598);
             this.PanelFormPrint.TabIndex = 508;
