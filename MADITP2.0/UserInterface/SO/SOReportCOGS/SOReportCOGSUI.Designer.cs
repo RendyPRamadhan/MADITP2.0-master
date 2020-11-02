@@ -41,7 +41,15 @@
             this.navView = new Tira.Component.TiraButton();
             this.PanelFormList = new System.Windows.Forms.Panel();
             this.dgvResult = new Tira.Component.TiraDataGrid();
+            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.principal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kode_product = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.product = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cogs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tiraGroupBox1 = new Tira.Component.TiraGroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.dtpPeriod = new System.Windows.Forms.DateTimePicker();
             this.cmbSearchProduct = new Tira.Component.TiraComboBox();
             this.cmbSearchPrincipal = new Tira.Component.TiraComboBox();
@@ -54,14 +62,6 @@
             this.bindingObjCOGS = new System.Windows.Forms.BindingSource(this.components);
             this.PanelFormPrint = new System.Windows.Forms.Panel();
             this.rptViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.principal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kode_product = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.product = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cogs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelTopMenu.SuspendLayout();
             this.PanelFormList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
@@ -293,6 +293,46 @@
             this.dgvResult.Size = new System.Drawing.Size(712, 245);
             this.dgvResult.TabIndex = 496;
             // 
+            // Num
+            // 
+            this.Num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Num.DataPropertyName = "Num";
+            this.Num.HeaderText = "Num";
+            this.Num.Name = "Num";
+            this.Num.ReadOnly = true;
+            // 
+            // principal
+            // 
+            this.principal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.principal.DataPropertyName = "principal";
+            this.principal.HeaderText = "Principal / Product Group";
+            this.principal.Name = "principal";
+            this.principal.ReadOnly = true;
+            // 
+            // kode_product
+            // 
+            this.kode_product.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.kode_product.DataPropertyName = "kode_product";
+            this.kode_product.HeaderText = "Kode Product";
+            this.kode_product.Name = "kode_product";
+            this.kode_product.ReadOnly = true;
+            // 
+            // product
+            // 
+            this.product.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.product.DataPropertyName = "product";
+            this.product.HeaderText = "Product";
+            this.product.Name = "product";
+            this.product.ReadOnly = true;
+            // 
+            // cogs
+            // 
+            this.cogs.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cogs.DataPropertyName = "cogs";
+            this.cogs.HeaderText = "COGS";
+            this.cogs.Name = "cogs";
+            this.cogs.ReadOnly = true;
+            // 
             // tiraGroupBox1
             // 
             this.tiraGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -312,6 +352,33 @@
             this.tiraGroupBox1.Text = "Filter";
             this.tiraGroupBox1.TiraBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(104)))), ((int)(((byte)(36)))));
             this.tiraGroupBox1.TiraTextColor = System.Drawing.Color.Black;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Periode :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Product :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Principal :";
             // 
             // dtpPeriod
             // 
@@ -464,7 +531,7 @@
             // 
             this.PanelFormPrint.BackColor = System.Drawing.Color.White;
             this.PanelFormPrint.Controls.Add(this.rptViewer);
-            this.PanelFormPrint.Location = new System.Drawing.Point(24, 540);
+            this.PanelFormPrint.Location = new System.Drawing.Point(12, 458);
             this.PanelFormPrint.Name = "PanelFormPrint";
             this.PanelFormPrint.Size = new System.Drawing.Size(991, 598);
             this.PanelFormPrint.TabIndex = 508;
@@ -478,73 +545,6 @@
             this.rptViewer.Name = "rptViewer";
             this.rptViewer.Size = new System.Drawing.Size(991, 598);
             this.rptViewer.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Principal :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Product :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 84);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Periode :";
-            // 
-            // Num
-            // 
-            this.Num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Num.DataPropertyName = "Num";
-            this.Num.HeaderText = "Num";
-            this.Num.Name = "Num";
-            this.Num.ReadOnly = true;
-            // 
-            // principal
-            // 
-            this.principal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.principal.DataPropertyName = "principal";
-            this.principal.HeaderText = "Principal / Product Group";
-            this.principal.Name = "principal";
-            this.principal.ReadOnly = true;
-            // 
-            // kode_product
-            // 
-            this.kode_product.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.kode_product.DataPropertyName = "kode_product";
-            this.kode_product.HeaderText = "Kode Product";
-            this.kode_product.Name = "kode_product";
-            this.kode_product.ReadOnly = true;
-            // 
-            // product
-            // 
-            this.product.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.product.DataPropertyName = "product";
-            this.product.HeaderText = "Product";
-            this.product.Name = "product";
-            this.product.ReadOnly = true;
-            // 
-            // cogs
-            // 
-            this.cogs.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cogs.DataPropertyName = "cogs";
-            this.cogs.HeaderText = "COGS";
-            this.cogs.Name = "cogs";
-            this.cogs.ReadOnly = true;
             // 
             // SOReportCOGSUI
             // 
