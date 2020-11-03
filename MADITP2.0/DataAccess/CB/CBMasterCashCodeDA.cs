@@ -114,5 +114,27 @@ namespace MADITP2._0.DataAccess.CB
                 throw ex;
             }
         }
+
+        public int CMD_TESTGITHUB(CBMasterCashCodeBL Model, string SQLQuery)
+        {
+            try
+            {
+                var sqlParameter = new List<SqlParameterHelper>() {
+                    new SqlParameterHelper(){PARAMETR_NAME = "@SQLQuery", VALUE= SQLQuery },
+                    new SqlParameterHelper(){PARAMETR_NAME = "@cb_cash_id_1", VALUE= Model.cash_id },
+                    new SqlParameterHelper(){PARAMETR_NAME = "@cb_description_2", VALUE= Model.description },
+                     new SqlParameterHelper(){PARAMETR_NAME = "@cb_code_type_3", VALUE= Model.code_type },
+                    new SqlParameterHelper(){PARAMETR_NAME = "@cb_report_sequence_number_4", VALUE= Model.sequence_number },
+                    new SqlParameterHelper(){PARAMETR_NAME = "@cb_user_define_5",  VALUE= Model.user_define },
+                    new SqlParameterHelper(){PARAMETR_NAME = "@cb_user_id_6", VALUE= clsLogin.USERID },
+                };
+                var result = Helper.ExecuteStoreProcedure("[BOOK_DEV2].[dbo].[SP_CB_CMD_CASH_CODE]", sqlParameter);
+                return (int)result[0].Rows[0].ItemArray.ElementAt(0);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
